@@ -10,12 +10,25 @@
     <div id="page">
         <h1 id="header">List</h1>
         <h2 class="subheading">Buy Groceries</h2>
-        <ul>
+        <ul id="grocery-list">
             <li id="one" class="hot"><em>fresh</em> figs</li>
             <li id="two" class="hot">pine nuts</li>
             <li id="three" class="hot">honey</li>
             <li id="four">balsamic vinegar</li>
         </ul>
+        <!-- 
+        When the user click the add item button. we want to add the item to the end of the list
+        - click event listener
+        - find the input node
+        - access the text
+        - create a list item
+        - assign the text to the list item
+        - put the new li at the end of the ul
+            - find the ul node
+            - append li as a child
+         -->
+        <input type="text" name="add-item" id="new-item">
+        <button id="add-item-button">Add item</button>
         <button id="counter">+1</button>
         <p id="count">0</p>
         <script src="js/list.js"></script>

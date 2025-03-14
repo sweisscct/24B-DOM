@@ -19,3 +19,28 @@ counterButton.addEventListener("click", () => {
     countNode.innerText = countText;
 })
 
+// When the user click the add item button. we want to add the item to the end of the list
+// - click event listener
+// - find the input node
+// - access the text
+// - create a list item
+// - assign the text to the list item
+// - put the new li at the end of the ul
+//     - find the ul node
+//     - append li as a child
+
+document.getElementById("add-item-button").addEventListener("click", () => {
+    let newItemInput = document.getElementById("new-item");
+    // newItemInput.innerText
+    let newItem = document.createElement("li");
+    console.log(newItemInput.value);
+    newItem.innerText = newItemInput.value;
+    newItemInput.value = "";
+    document.getElementById("grocery-list").appendChild(newItem);
+})
+
+/*
+    Exercise
+    When we click on an item, it gets removed from the list
+*/
+
