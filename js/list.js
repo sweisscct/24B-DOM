@@ -35,6 +35,9 @@ document.getElementById("add-item-button").addEventListener("click", () => {
     let newItem = document.createElement("li");
     console.log(newItemInput.value);
     newItem.innerText = newItemInput.value;
+    newItem.addEventListener("click", () => {
+        newItem.remove();
+    })
     newItemInput.value = "";
     document.getElementById("grocery-list").appendChild(newItem);
 })
@@ -43,4 +46,17 @@ document.getElementById("add-item-button").addEventListener("click", () => {
     Exercise
     When we click on an item, it gets removed from the list
 */
+
+let listItems = document.getElementsByTagName("li");
+for (let i=0; i<listItems.length; i++) {
+
+    let item = listItems[i];
+    item.addEventListener("click", () => {
+        item.remove();
+    })
+
+    // listItems[i].addEventListener("click", () => {
+    //     listItems[i].remove();
+    // })
+}
 
